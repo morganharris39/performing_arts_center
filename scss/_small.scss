@@ -56,8 +56,8 @@ nav {
         padding: 0.8rem $gutter;
     }
     ul li.active a {
-        background-color: rgba(255,255,255,0.8);
-        color: $primaryColor;
+        background-color: rgba(78, 31, 97, 0.8);
+        color: $greyColor;
         border-radius: 10px;
     }
 }
@@ -65,7 +65,7 @@ nav {
 /* --------------------------- MAIN --------------------------- */
 main {
     h1 {
-        padding: 1rem $gutter.5rem $gutter;
+        padding: 1rem $gutter.5rem 1rem;
         font-size: 1.5rem;
         color: $secondaryColor;
         font-weight: $lightWeight
@@ -75,7 +75,37 @@ main {
         color: #333;
         line-height: $leading;
     }
-}// end main
+}
+
+main > div > div {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.parentGallery {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+    column-gap: 8px;
+
+    div {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 300px;
+
+        p {
+            background-color: $accentColor;
+            margin: 0;
+        }
+    }
+}
+
+// end main
 
 
 

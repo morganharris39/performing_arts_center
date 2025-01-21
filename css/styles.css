@@ -320,7 +320,7 @@ body {
 
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #eaeaea;
 }
 
 header {
@@ -334,12 +334,12 @@ header {
 header span {
   font-size: 1.6rem;
   font-weight: 300;
-  color: #1d295f;
+  color: #2c0d30;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
-  background-color: #1d295f;
+  background-color: #2c0d30;
 }
 
 nav ul {
@@ -350,22 +350,22 @@ nav ul li {
   list-style-type: none;
 }
 nav ul li a {
-  color: #ccc;
+  color: #eaeaea;
   text-decoration: none;
   display: block;
   padding: 0.8rem 10px;
 }
 nav ul li.active a {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #1d295f;
+  background-color: rgba(78, 31, 97, 0.8);
+  color: #eaeaea;
   border-radius: 10px;
 }
 
 /* --------------------------- MAIN --------------------------- */
 main h1 {
-  padding: 1rem 10px 0.5rem 10px;
+  padding: 1rem 10px 0.5rem 1rem;
   font-size: 1.5rem;
-  color: #7c1d47;
+  color: #4e1f61;
   font-weight: 300;
 }
 main p {
@@ -374,20 +374,45 @@ main p {
   line-height: 150%;
 }
 
+main > div > div img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.parentGallery {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.parentGallery div {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 300px;
+}
+.parentGallery div p {
+  background-color: #f1b341;
+  margin: 0;
+}
+
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #1d295f;
+  background-color: #2c0d30;
 }
 
 footer {
   font-size: 0.85rem;
   padding: 1rem 10px;
-  color: #ccc;
+  color: #eaeaea;
   text-align: center;
   line-height: 150%;
 }
 footer a {
-  color: #ccc;
+  color: #eaeaea;
 }
 
 @media only screen and (min-width: 35rem) {
@@ -402,8 +427,8 @@ footer a {
     margin: 10px 0;
   }
   nav ul li a:hover {
-    -webkit-text-decoration: underline 2px #3990c3;
-            text-decoration: underline 2px #3990c3;
+    -webkit-text-decoration: underline 2px #f1b341;
+            text-decoration: underline 2px #f1b341;
   }
 }
 @media only screen and (min-width: 64rem) {
