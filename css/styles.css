@@ -324,17 +324,28 @@ body {
 }
 
 header {
-  display: grid;
-  grid-template-columns: 50px auto;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem 10px;
 }
-header span {
-  font-size: 1.6rem;
+header .header-content {
+  display: flex;
+  align-items: center;
+}
+header .header-content img {
+  margin-right: 10px;
+}
+header .header-content span {
+  font-size: 1.2rem;
   font-weight: 500;
   color: #2c0d30;
+}
+header p.phone .phoneIcon {
+  display: inline;
+}
+header p.phone .phoneText {
+  display: none;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
@@ -412,6 +423,14 @@ main > div > div img {
   text-align: center;
 }
 
+main > div > div > p a {
+  color: #333;
+  text-decoration: none;
+}
+main > div > div > p a:hover {
+  text-decoration: underline;
+}
+
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
   background-color: #2c0d30;
@@ -442,6 +461,24 @@ footer a {
   nav ul li a:hover {
     -webkit-text-decoration: underline 2px #f1b341;
             text-decoration: underline 2px #f1b341;
+  }
+  header p.phone {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  header p.phone a {
+    color: #2c0d30;
+    text-decoration: none;
+  }
+  header p.phone a:hover {
+    text-decoration: underline;
+  }
+  header p.phone .phoneText {
+    display: inline;
+  }
+  header p.phone .phoneIcon {
+    display: none;
   }
 }
 @media only screen and (min-width: 64rem) {

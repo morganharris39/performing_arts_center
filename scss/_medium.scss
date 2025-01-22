@@ -13,3 +13,24 @@ nav {
         text-decoration: underline 2px $accentColor;
     }
 }
+
+header {
+    p.phone {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: $normalWeight;
+        a {
+            color: $primaryColor;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .phoneText {
+            display: inline;
+        }
+        .phoneIcon {
+            display: none;
+        }
+    }
+}

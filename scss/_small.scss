@@ -21,19 +21,40 @@ body {
 
 
 /* --------------------------- HEADER --------------------------- */
-#headerWrapper {border-bottom: 1px solid $greyColor;}
+#headerWrapper {
+    border-bottom: 1px solid $greyColor;
+}
+
 header {
-    display: grid;
-    grid-template-columns: 50px auto;
-    column-gap: $gutter;
-    align-items: center; //vertically
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // Vertically align items
     padding: .5rem $gutter;
-    span {
-        font-size: 1.6rem;
-        font-weight: $normalWeight;
-        color: $primaryColor;
+
+    .header-content {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: $gutter;
+        }
+
+        span {
+            font-size: 1.2rem;
+            font-weight: $normalWeight;
+            color: $primaryColor;
+        }
     }
-} // end header
+
+    p.phone {
+        .phoneIcon {
+            display: inline;
+        }
+        .phoneText {
+            display: none;
+        }
+    }
+}  // end header
 
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
@@ -112,6 +133,16 @@ main > div > div {
             border-bottom-right-radius: 10px;
             text-align: center;
         }
+    }
+}
+
+main > div > div > p {
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
     }
 }
 
